@@ -25,6 +25,17 @@ $(document).keypress(function() {
       started = true;
     }
   });
+
+  $(document).tap(function(){
+    if (started=== false) {
+  
+        //3. The h1 title starts o+ ut saying "Press A Key to Start", when the game has started, change this to say "Level 0".
+        $("#level-title").text("Level " + level);
+        nextSequence();
+        started = true;
+      }
+
+  });
   
 // $(document).on("keypress", function(event){
 //     // console.log(event.key);
